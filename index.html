@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="theme-color" content="#0b0c10" />
+  <title>معرفی پروژه | ویدیوی ارائه</title>
+  <style>
+    :root { color-scheme: dark; font-family: Tahoma, Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b0c10; color: #f5f6fa; min-height: 100svh; display: grid; place-items: center; padding: 24px; }
+    main { width: min(100%, 1060px); }
+    .eyebrow { color: #a8aab6; font-size: 13px; display:flex; align-items:center; gap: 10px; margin-bottom: 16px; }
+    .eyebrow::before { content:""; background:#a5acbc; width:7px; height:7px; border-radius:100%; }
+    h1 { font-weight: 500; letter-spacing: -.025em; line-height: 1.6; font-size: clamp(24px, 4vw, 38px); margin: 0 0 6px; }
+    p { color: #a1a2ae; line-height: 2; font-size: 14px; margin: 0 0 26px; }
+    .frame { overflow:hidden; border-radius: 18px; border: 1px solid #272932; background: #000; box-shadow: 0 28px 110px #0008; }
+    video { display:block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain; background: #000; }
+    footer { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin-top:20px; color:#9295a2; font-size: 12px; }
+    #error { display:none; margin-top:20px; background:#311c1f; color:#ffd8da; border:1px solid #603b42; border-radius:10px; padding:12px 15px; font-size:13px; }
+    @media(max-width:600px) {body {display:block; padding:58px 16px;} .frame {border-radius:11px;} p {margin-bottom:20px;} }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">ارائه پروژه</div>
+    <h1>ویدیوی معرفی پروژه</h1>
+    <p>در این ویدیو، قابلیت‌ها و نحوه عملکرد پروژه توضیح داده شده است.</p>
+    <div class="frame">
+      <video controls preload="metadata" playsinline controlsList="nodownload">
+        <source src="/%D8%B4%D8%A8%DA%A9%D9%87%20%D9%86%D8%AE%D8%A8%DA%AF%D8%A7%D9%86%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20and%2010%20more%20pages%20-%20Personal%20-%20Microsoft_%20Edge%202026-11-14%2011-35-10-compressed.mp4" type="video/mp4">
+        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+    <div id="error" role="alert">خطا در بارگذاری ویدیو. لطفاً صفحه را دوباره باز کنید.</div>
+    <footer><span>برای پخش، روی دکمه Play بزنید.</span><span>Project Presentation</span></footer>
+  </main>
+  <script>document.querySelector("video").addEventListener("error",function(){document.getElementById("error").style.display="block"},true)</script>
+</body>
+</html>
